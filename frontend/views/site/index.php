@@ -2,7 +2,7 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'My Yii Application';
+$this->title = 'Джей Фост | Стихи с запахом моря';
 ?>
 <div class="site-index">
 

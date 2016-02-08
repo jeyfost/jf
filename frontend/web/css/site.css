@@ -10,7 +10,7 @@ html, body {
     background-color: #f3f3d3;
 }
 
-h3, .control-label, #w1 {
+h3, .control-label, .basic, #w1 {
     font-family: Corbel, Tahoma, Geneva, sans-serif;
     font-size: 18px;
     font-weight: normal;
@@ -42,7 +42,13 @@ ul, li {
     font-size: 18px;
     font-weight: normal;
     color: #0c9a8c;
-    text-decoration: none;
+}
+
+.basicRed {
+    color: #a94442;
+    font-family: Corbel, Tahoma, Geneva, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
 }
 
 .basicGreen:hover {
@@ -175,4 +181,13 @@ a.desc:after {
 
 .navbar-fixed-top {
     background-color: #ffffff;
+}
+
+.btn {
+    background-color: #0c9a8c;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #06403a;
 }

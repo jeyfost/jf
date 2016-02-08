@@ -1,6 +1,6 @@
 <?php
 return [
-    'name' => 'Джей Фост',
+    'name' => 'Джей Фост | Стихи с запахом моря',
     'language' => 'ru',
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'components' => [

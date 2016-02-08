@@ -7,21 +7,17 @@
 
 use yii\helpers\Html;
 
-$this->title = $name;
+$this->title = 'Такой страницы не существует :(';
 ?>
 <div class="site-error">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
     <div class="alert alert-danger">
-        <?= nl2br(Html::encode($message)) ?>
+        <span class="basicRed"><?= nl2br(Html::encode("Такой страницы не существует :(")) ?></span>
     </div>
 
-    <p>
-        The above error occurred while the Web server was processing your request.
-    </p>
-    <p>
-        Please contact us if you think this is a server error. Thank you.
-    </p>
+    <p class="basic">Но, к счастью, на сайте есть другие интересные страницы. Например, <a href="poems"><span class="basicGreen">страница со стихами</span></a>.
+        Попробуйте заглянуть туда, ведь вы находитесь на сайте, где живут стихи, а значит, вам нужно именно к ним :)</p>
+    <br /><br />
+    <center><a class="btn btn-lg btn-success" href="poems">перейти на страницу со стихами</a></center>
 
 </div>
