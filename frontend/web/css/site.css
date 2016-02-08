@@ -172,3 +172,7 @@ a.desc:after {
 .col-lg-3 {
     cursor: pointer;
 }
+
+.navbar-fixed-top {
+    background-color: #ffffff;
+}
