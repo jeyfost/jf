@@ -62,6 +62,9 @@ class SiteController extends Controller
                 'class' => 'yii\captcha\CaptchaAction',
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
+            'page' => [
+                'class' => 'yii\web\ViewAction',
+            ]
         ];
     }
 
@@ -74,6 +77,17 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
+
+    public function actionPoems()
+    {
+        return $this->render('poems');
+    }
+
+    public function actionEvents()
+    {
+        return $this->render('events');
+    }
+
 
     /**
      * Logs in a user.
@@ -129,16 +143,6 @@ class SiteController extends Controller
                 'model' => $model,
             ]);
         }
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return mixed
-     */
-    public function actionAbout()
-    {
-        return $this->render('about');
     }
 
     /**

@@ -8,16 +8,24 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\captcha\Captcha;
 
-$this->title = 'Contact';
+$this->title = 'Контактная информация';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-contact">
-    <h1><?= Html::encode($this->title) ?></h1>
+    <br />
 
-    <p>
-        If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.
-    </p>
+    <h3>По вопросам сотрудничества или организации вечеров обращайтесь по одной из указанных ниже ссылок или отправляйте письмо через форму.</h3>
 
+    <ul>
+        <a href="https://vk.com/jeyfost"><li>Личная страница VK</li></a>
+        <a href="https://vk.com/jey_fost"><li>Официальная группа VK</li></a>
+        <a href="https://vk.com/jeyfost"><li>Страница на Стихи.ру</li></a>
+        <a href="https://vk.com/jeyfost"><li>Личная почта: jeyfost@aol.com</li></a>
+    </ul>
+
+    <br /><br />
+
+    <h2>Форма обратной связи</h2>
     <div class="row">
         <div class="col-lg-5">
             <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>

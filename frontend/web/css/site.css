@@ -1,6 +1,27 @@
-html,
-body {
+@font-face {
+    font-family: 'Corbel';
+    src: url('../fonts/corbel.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
     height: 100%;
+    background-color: #f3f3d3;
+}
+
+h3 {
+    font-family: Corbel, Tahoma, Geneva, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #404040;
+}
+
+li {
+    font-family: Corbel, Tahoma, Geneva, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #0c9a8c;
 }
 
 .wrap {
