@@ -19,7 +19,7 @@ AppAsset::register($this);
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
-    <link rel="shortcut icon" type="image/x-icon" href="./frontend/web/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= Yii::$app->homeUrl ?>/favicon.ico">
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
@@ -29,24 +29,24 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => "<img src='../img/logo.png' />",
+        'brandLabel' => '<img src="'.Yii::$app->homeUrl.'/img/logo.png" />',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-fixed-top',
         ],
     ]);
     $menuItems = [
-        ['label' => 'Главная', 'url' => ['/site/index']],
-        ['label' => 'Стихи', 'url' => ['/site/poems']],
-        ['label' => 'События', 'url' => ['/site/events']],
-        ['label' => 'Контакты', 'url' => ['/site/contact']],
+        ['label' => 'главная', 'url' => ['/site/index']],
+        ['label' => 'стихи', 'url' => ['/site/poems']],
+        ['label' => 'события', 'url' => ['/site/events']],
+        ['label' => 'контакты', 'url' => ['/site/contact']],
     ];
     if (Yii::$app->user->isGuest) {
-        $menuItems[] = ['label' => 'Зарегистрироваться', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Войти', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => 'зарегистрироваться', 'url' => ['/site/signup']];
+        $menuItems[] = ['label' => 'войти', 'url' => ['/site/login']];
     } else {
         $menuItems[] = [
-            'label' => 'Выйти (' . Yii::$app->user->identity->username . ')',
+            'label' => 'выйти (' . Yii::$app->user->identity->username . ')',
             'url' => ['/site/logout'],
             'linkOptions' => ['data-method' => 'post']
         ];
