@@ -186,6 +186,9 @@ a.desc:after {
 .btn {
     background-color: #0c9a8c;
     border: none;
+    font-family: Corbel, Tahoma, Geneva, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
 }
 
 .btn:hover {
