@@ -12,39 +12,42 @@ $this->title = 'Контактная информация';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-contact">
-    <br />
 
     <h3>По вопросам сотрудничества или организации вечеров обращайтесь по одной из указанных ниже ссылок или отправляйте письмо через форму.</h3>
+    <br />
 
     <ul>
-        <a href="https://vk.com/jeyfost"><li>Личная страница VK</li></a>
-        <a href="https://vk.com/jey_fost"><li>Официальная группа VK</li></a>
-        <a href="https://vk.com/jeyfost"><li>Страница на Стихи.ру</li></a>
-        <a href="https://vk.com/jeyfost"><li>Личная почта: jeyfost@aol.com</li></a>
+        <a href="https://vk.com/jeyfost" target="_blank"><li><span class="basicGreen">Личная страница VK</span></li></a>
+        <a href="https://vk.com/jey_fost" target="_blank"><li><span class="basicGreen">Официальная группа VK</span></li></a>
+        <a href="http://stihi.ru/avtor/jeyfost" target="_blank"><li><span class="basicGreen">Страница на Стихи.ру</span></li></a>
+        <a href="mailto:jeyfost@aol.com"><li><span class="basicGreen">Личная почта: jeyfost@aol.com</span></li></a>
     </ul>
 
-    <br /><br />
+    <br />
+    <div style="width: 100%; height: 1px; background-color: #d0d0b5;"></div>
+    <br />
 
     <h2>Форма обратной связи</h2>
+    <br />
     <div class="row">
         <div class="col-lg-5">
             <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
-                <?= $form->field($model, 'name') ?>
+            <?= $form->field($model, 'name') ?>
 
-                <?= $form->field($model, 'email') ?>
+            <?= $form->field($model, 'email') ?>
 
-                <?= $form->field($model, 'subject') ?>
+            <?= $form->field($model, 'subject') ?>
 
-                <?= $form->field($model, 'body')->textArea(['rows' => 6]) ?>
+            <?= $form->field($model, 'body')->textArea(['rows' => 6]) ?>
 
-                <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
-                    'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
-                ]) ?>
+            <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
+                'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
+            ]) ?>
 
-                <div class="form-group">
-                    <?= Html::submitButton('Submit', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
-                </div>
+            <div class="form-group">
+                <?= Html::submitButton('Отпраить письмо', ['class' => 'btn btn-primary', 'name' => 'contact-button']) ?>
+            </div>
 
             <?php ActiveForm::end(); ?>
         </div>

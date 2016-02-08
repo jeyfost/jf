@@ -10,18 +10,43 @@ html, body {
     background-color: #f3f3d3;
 }
 
-h3 {
+h3, .control-label {
     font-family: Corbel, Tahoma, Geneva, sans-serif;
     font-size: 18px;
     font-weight: normal;
     color: #404040;
 }
 
-li {
+h2 {
     font-family: Corbel, Tahoma, Geneva, sans-serif;
     font-size: 18px;
     font-weight: normal;
     color: #0c9a8c;
+}
+
+a {
+    color: #0c9a8c;
+    text-decoration: none;
+}
+
+ul, li {
+    text-decoration: none;
+}
+
+.basicGreen {
+    font-family: Corbel, Tahoma, Geneva, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #0c9a8c;
+    text-decoration: none;
+}
+
+.basicGreen:hover {
+    color: #06403a;
+}
+
+a:hover {
+color: #06403a;
 }
 
 .wrap {
@@ -109,4 +134,22 @@ a.desc:after {
     border-left: 3px solid #eed3d7;
     padding: 10px 20px;
     margin: 0 0 15px 0;
+}
+
+.breadcrumb {
+    background-color: #d0d0b5;
+}
+
+.breadcrumb > li + li:before {
+    color: #777;
+}
+
+.btn-primary {
+    background-color: #0c9a8c;
+    border-color: #0c9a8c;
+}
+
+.btn-primary:hover {
+    background-color: #06403a;
+    border-color: #06403a;
 }
