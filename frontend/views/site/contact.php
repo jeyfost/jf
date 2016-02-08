@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div style="width: 100%; height: 1px; background-color: #d0d0b5;"></div>
     <br />
 
-    <h2>Форма обратной связи</h2>
+    <div class="headerBlock">Форма обратной связи</div>
     <br />
     <div class="row">
         <div class="col-lg-5">
