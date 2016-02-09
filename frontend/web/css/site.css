@@ -8,6 +8,10 @@
 html, body {
     height: 100%;
     background-color: #f3f3d3;
+    font-family: Corbel, Tahoma, Geneva, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #404040;
 }
 
 h3, .control-label, .basic, #w1 {
@@ -29,7 +33,7 @@ a {
     text-decoration: none;
 }
 
-a:hover, .basicGreen:hover {
+a:hover, .basicGreen:hover, .col-lg-5 a:hover {
     color: #06403a;
 }
 
@@ -223,6 +227,6 @@ a.desc:after {
     transition: all 0.2s ease-in-out;
 }
 
-#w1 li a:hover {
+#w1 li a:hover, .col-lg-5 a {
     color: #0c9a8c;
 }
