@@ -41,6 +41,13 @@ ul, li {
     text-decoration: none;
 }
 
+h1 {
+    font-family: Corbel, Tahoma, Geneva, sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    color: #0c9a8c;
+}
+
 .basicGreen {
     font-family: Corbel, Tahoma, Geneva, sans-serif;
     font-size: 18px;
