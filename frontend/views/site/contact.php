@@ -11,7 +11,7 @@ use yii\captcha\Captcha;
 $this->title = 'Контактная информация';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<h1 class="site-contact">
+<div class="site-contact">
 
     <h3>По вопросам сотрудничества или организации вечеров обращайтесь по одной из указанных ниже ссылок или отправляйте письмо через форму.</h3>
     <br />
