@@ -237,3 +237,25 @@ a.desc:after {
 #w1 li a:hover, .col-lg-5 a {
     color: #0c9a8c;
 }
+
+.main-block {
+    width: 100%;
+    background-color: #fff;
+    min-height: 270px;
+    min-width: 540px;
+}
+
+.main-block img {
+    width: 50%;
+    display: inline-block;
+    min-width: 270px;
+    min-height: 270px;
+}
+
+.main-block-text {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+    float: right;
+}
