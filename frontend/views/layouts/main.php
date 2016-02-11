@@ -69,7 +69,7 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="f-container">
-        <p class="pull-center"><span class="fText">Джей Фост &copy; 2011 - <?= date('Y') ?></span></p>
+        <p class="center-block""><span class="fText">Джей Фост &copy; 2011 - <?= date('Y') ?></span></p>
     </div>
 </footer>
 

@@ -259,3 +259,46 @@ a.desc:after {
     display: inline-block;
     float: right;
 }
+
+.news-block {
+    height: 200px;
+    width: 100%;
+    background-color:  transparent;
+    min-width: 621px;
+}
+
+.news-block-left {
+    width: 49%;
+    height: 200px;
+    float: left;
+    min-width: 310px;
+}
+
+.news-block-right {
+    width: 49%;
+    height: 200px;
+    float: right;
+    min-width: 310px;
+}
+
+.news-entry {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    width: 99%;
+    height: 40px;
+    background-color: #d0d0b5;
+    min-width: 310px;
+    cursor: pointer;
+}
+
+.news-entry img, .news-entry p {
+    position: relative;
+    float: left;
+}
+
+.news-entry p {
+    line-height: 40px;
+    font-size: 16px;
+}

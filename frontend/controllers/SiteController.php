@@ -8,10 +8,14 @@ use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
 use yii\base\InvalidParamException;
+use yii\data\Pagination;
 use yii\web\BadRequestHttpException;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+
+use app\models\Poems;
+use app\models\News;
 
 /**
  * Site controller
@@ -75,7 +79,22 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $query = News::find();
+
+        $pagination = new Pagination([
+            'defaultPageSize' => 4,
+            'totalCount' => $query->count(),
+        ]);
+
+        $news = $query->orderBy(['id' => SORT_DESC])
+            ->offset($pagination->offset)
+            ->limit($pagination->limit)
+            ->all();
+
+        return $this->render('index', [
+            'news' => $news,
+            'pagination' => $pagination,
+        ]);
     }
 
     public function actionPoems()
