@@ -1,4 +1,4 @@
-function selectNews(id) {
+function selectNews(id, news_date, news_name) {
     if(!document.getElementById(id).getAttribute('name')) {
         var divs = document.getElementsByClassName('news-entry');
 

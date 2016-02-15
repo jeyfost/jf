@@ -16,6 +16,7 @@ use yii\filters\AccessControl;
 
 use app\models\Poems;
 use app\models\News;
+use app\models\Events;
 
 /**
  * Site controller

@@ -4,6 +4,10 @@
 
 use yii\helpers\Html;
 
+use app\models\News;
+use app\models\Events;
+use app\models\Poems;
+
 $this->title = 'Джей Фост | Стихи с запахом моря';
 ?>
 <div class="site-index">
@@ -22,15 +26,24 @@ $this->title = 'Джей Фост | Стихи с запахом моря';
     <div class="news-block">
         <div class="news-block-left">
             <?php foreach($news as $n): ?>
+                <?php
+                    if($n->type == "poem") {
+                        $index_query = Poems::find()->select('header')->where(['id' => $n->stuff_id])->one();
+                    }
 
-            <div class="news-entry" id="news<?= Html::encode($n->id) ?>"
-                 onmouseover="changeNewsEntry('1', 'news<?= Html::encode($n->id) ?>', 'img<?= Html::encode($n->id) ?>', 'text<?= Html::encode($n->id) ?>')"
-                 onmouseout="changeNewsEntry('0', 'news<?= Html::encode($n->id) ?>', 'img<?= Html::encode($n->id) ?>', 'text<?= Html::encode($n->id) ?>')"
-            onclick="selectNews('news<?= Html::encode($n->id) ?>')">
-                <img src="<?= Yii::$app->homeUrl; ?>/img/pencil_black.png" id="img<?= Html::encode($n->id) ?>" />
-                <p id="text<?= Html::encode($n->id) ?>"><?php if(Html::encode($n->type) == "poem") {echo "Опубликовано новое стихотворение";} elseif(Html::encode($n->type) == "event") {echo "Запланированно новое событие";} ?></p>
-            </div>
-            <div style='width: 100%; height: 10px;'></div>
+                    if($n->type == "event") {
+                        $index_query = Events::find()->where(['id' => $n->stuff_id])->one();
+                    }
+                ?>
+
+                <div class="news-entry" id="news<?= Html::encode($n->id) ?>"
+                     onmouseover="changeNewsEntry('1', 'news<?= Html::encode($n->id) ?>', 'img<?= Html::encode($n->id) ?>', 'text<?= Html::encode($n->id) ?>')"
+                     onmouseout="changeNewsEntry('0', 'news<?= Html::encode($n->id) ?>', 'img<?= Html::encode($n->id) ?>', 'text<?= Html::encode($n->id) ?>')"
+                onclick="selectNews('news<?= Html::encode($n->id) ?>', '<?= Html::encode($n->date) ?>')">
+                    <img src="<?= Yii::$app->homeUrl; ?>/img/pencil_black.png" id="img<?= Html::encode($n->id) ?>" />
+                    <p id="text<?= Html::encode($n->id) ?>"><?php if(Html::encode($n->type) == "poem") {echo "Опубликовано новое стихотворение";} elseif(Html::encode($n->type) == "event") {echo "Запланированно новое событие";} ?></p>
+                </div>
+                <div style='width: 100%; height: 10px;'></div>
 
             <?php endforeach; ?>
         </div>
